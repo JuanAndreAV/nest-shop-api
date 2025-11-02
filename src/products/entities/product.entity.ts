@@ -53,7 +53,7 @@ export class Product {
         (productImage) => productImage.product,
         {
             cascade: true,
-            //eager: true
+            eager: true // trae las relaciones, pero las debo especificar en el servicio con leftJoinAndSelect()
         }
     )
     images?: ProductImage[]
